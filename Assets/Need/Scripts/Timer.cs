@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public GameObject[] objectsToBeActivate; 
-    
+    public GameObject[] Activate;
+    public GameObject[] Disactivate;
     public float Time;
-
-    private int index;
 
     //Use this for initialization
     void Start()
@@ -21,10 +19,16 @@ public class Timer : MonoBehaviour
     public void Timer_()
 
     {
-        for (int i = 0; i < objectsToBeActivate.Length; i++)
+        for (int i = 0; i < Activate.Length; i++)
         {
-            objectsToBeActivate[index].SetActive(false);
+            Activate[i].SetActive(true);
         }
+
+        for (int i = 0; i < Disactivate.Length; i++)
+        {
+            Disactivate[i].SetActive(false);
+        }
+
     }
 
 
